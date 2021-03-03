@@ -1,0 +1,86 @@
+﻿using System;
+
+namespace ConsoleAppCars
+{
+
+
+
+            START WITH ADDING IT TO GITHUB. SAY THAT ITS A GOOD HABIT
+
+                add a new class called Car
+            add fields 
+            default is private
+           <program>
+            Instantiate a car
+            Car myCar = new Car();
+            show that the fields is not visible 
+            show what it inherits from Object by pressing myCar dot.
+                        </program>
+
+            <car>
+             add public to one field fex maxSpeed  = Not encapsulation
+             we dont want to make the public
+            add public string RegNr { get; set; }
+            </car>
+
+                       <program>
+            also we dont want to add the fields one by one
+                       <car>
+            what fields in the car class can not be changed?
+            create a new constructor with the fields that should not be able to be changed later 
+                       <program>
+            show that it is red under  new.
+            because the default constructor is gone.
+
+            if we replace the default constructor with parameters it gets required
+
+            show the mouse over hint that it shows the variable names.
+            fill in the new Car(with stuff)
+            add writeline car.tostring
+
+            run and show how ToString looks 
+            <car>
+
+            create a overloaded method called ToString
+
+        public override string ToString()
+        {
+            return $"Brand: {brand} \nModel: {model} \nYear: {year} \nMax Speed: {maxSpeed} \nReg Plate: {regPlate}";
+        }
+
+        run
+
+
+            now to show something static
+add a static carCounter
+            and int id
+            and id = ++carCounter; int the constructor
+
+            add id in ToString
+                        return $"Car id: {id}\nBrand: {brand} \nModel: {model} \nYear: {year} \nMax Speed: {maxSpeed} \nReg Plate: {regPlate}";
+
+            add a new car
+            Car myCar = new Car("BMW","Something",1981);
+        myCar.maxSpeed= 255;
+            myCar.RegPlate = "ulf123";
+
+            Console.WriteLine("Total number of cats: " +Cat.NumberOfCats);
+
+            now create a chained contructor becuase we know the name and regnr directly
+        public Car(string brand, string modelName, int year, int maxSpeed, string regPlate) : this(brand, modelName, year)
+        {
+            this.maxSpeed = maxSpeed;
+            this.regPlate = regPlate;  //leave this for Ulf to find during test later 
+
+        }
+
+        add a new Car and show that it is 2 to choose from
+
+
+
+
+
+
+    }
+    }
+}
